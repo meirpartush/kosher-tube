@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ייבוא המוני</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body id="import-page">
+    <!-- SIDENAV AND MODALS ARE INCLUDED VIA JS FOR CONSISTENCY ACROSS PAGES -->
+    <header>
+        <h1><i class="fas fa-file-import"></i> ייבוא סרטונים מרובים</h1>
+        <button class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></button>
+    </header>
+    <main>
+        <form id="bulk-import-form" class="add-container">
+            <h2>הדבק רשימת קישורים</h2>
+            <p>כל קישור יוטיוב בשורה נפרדת. המערכת תייבא אוטומטית כותרות, תמונות, ומידע נוסף.</p>
+            <div class="form-group">
+                <label for="video-links-textarea">רשימת קישורים:</label>
+                <textarea id="video-links-textarea" rows="12" placeholder="https://www.youtube.com/watch?v=...\nhttps://youtu.be/..."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="bulk-import-category">שייך לקטגוריה:</label>
+                <select id="bulk-import-category" required></select>
+            </div>
+            <button type="submit" class="submit-button"><i class="fas fa-cogs"></i> התחל ייבוא</button>
+        </form>
+        <div id="import-status" class="hidden">
+            <h3>לוג ייבוא:</h3>
+            <pre id="import-log"></pre>
+        </div>
+        <div id="status-message"></div>
+    </main>
+    <script src="config.js"></script> 
+    <script src="script.js"></script>
+</body>
+</html>

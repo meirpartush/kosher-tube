@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>יוטיוב כשר - דף הבית</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body id="main-page">
+    <!-- SIDENAV AND MODALS ARE INCLUDED VIA JS FOR CONSISTENCY ACROSS PAGES -->
+    
+    <header>
+        <h1><i class="fab fa-youtube"></i> יוטיוב כשר</h1>
+        <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="search" id="search-bar" placeholder="חפש סרטונים, קטגוריות או ערוצים...">
+        </div>
+        <button class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></button>
+    </header>
+    <main>
+        <div class="view-controls">
+            <button id="view-by-category" class="view-toggle-btn active" data-view="category">תצוגת קטגוריות</button>
+            <button id="view-by-channel" class="view-toggle-btn" data-view="channel">תצוגת ערוצים</button>
+        </div>
+        <div id="content-container"></div>
+        <p id="empty-message" class="hidden">עדיין לא הוספתם סרטונים. לחצו על כפתור התפריט כדי להתחיל.</p>
+    </main>
+    
+    <script src="config.js"></script> 
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>צפייה בסרטון</title>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body id="player-page">
+    <!-- SIDENAV AND MODALS ARE INCLUDED VIA JS FOR CONSISTENCY ACROSS PAGES -->
+    <header>
+        <h1 id="player-header-title">טוען סרטון...</h1>
+        <button class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></button>
+    </header>
+    <main class="player-main-content">
+        <div class="player-and-info-container">
+            <div class="player-wrapper-outer">
+                <div id="plyr-player" data-plyr-provider="youtube"></div>
+            </div>
+            <div class="video-info">
+                <h2 id="video-title-display">טוען כותרת...</h2>
+                <div class="video-metadata">
+                    <span id="video-views-display" class="views"><i class="fas fa-eye"></i> טוען...</span>
+                    <a href="#" id="video-channel-display" class="channel-link" target="_blank"><i class="fab fa-youtube"></i> טוען ערוץ...</a>
+                </div>
+                <div class="video-description"><p id="video-description-display">טוען תיאור...</p></div>
+            </div>
+        </div>
+        <aside class="suggestions-sidebar">
+            <div class="view-controls suggestions-controls">
+                <button id="suggestions-by-category" class="view-toggle-btn active">מאותה קטגוריה</button>
+                <button id="suggestions-by-channel" class="view-toggle-btn">מאותו ערוץ</button>
+            </div>
+            <div id="suggestions-list-container">
+                <div class="suggestion-item-placeholder"></div>
+            </div>
+        </aside>
+    </main>
+    <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
